@@ -42,3 +42,12 @@ function metAJourAffichage(index) {
 }
 
 
+document.querySelector('.arrow_right').addEventListener('click', () => {
+	indexActuel = (indexActuel + 1) % slides.length;
+    metAJourAffichage(indexActuel);
+});
+
+document.querySelector('.arrow_left').addEventListener('click', () => {
+	indexActuel = (indexActuel - 1 + slides.length) % slides.length;
+    metAJourAffichage(indexActuel);
+});
