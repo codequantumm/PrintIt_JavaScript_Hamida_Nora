@@ -20,6 +20,16 @@ const slides = [
 const dotsContainer = document.getElementById('dots');
 let indexActuel = 0;
 
+function initBulletPoints() {
+	slides.forEach((slide, index) => {
+		let dot = document.createElement('div');
+		dot.classList.add('dot');
+		if (index === 0) {
+			dot.classList.add('dot_selected');
+		}
+		dotsContainer.appendChild(dot);
+	});
+}
 
 
 
