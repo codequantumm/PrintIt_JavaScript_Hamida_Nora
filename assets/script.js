@@ -33,6 +33,12 @@ function initBulletPoints() {
 
 initBulletPoints();
 
+function metAJourAffichage(index) {
+    document.querySelector('.banner-img').src = `./assets/images/slideshow/${slides[index].image}`;
+    document.querySelector('#banner p').innerHTML = slides[index].tagLine;
 
+    document.querySelector('.dot.dot_selected').classList.remove('dot_selected');
+    dotsContainer.children[index].classList.add('dot_selected');
+}
 
 
