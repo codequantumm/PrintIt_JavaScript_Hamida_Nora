@@ -34,28 +34,27 @@ function initBulletPoints() {
 initBulletPoints();
 
 function metAJourAffichage(index) {
-    document.querySelector('.banner-img').src = `./assets/images/slideshow/${slides[index].image}`;
-    document.querySelector('#banner p').innerHTML = slides[index].tagLine;
+	document.querySelector('.banner-img').src = `./assets/images/slideshow/${slides[index].image}`;
+	document.querySelector('#banner p').innerHTML = slides[index].tagLine;
 
-    document.querySelector('.dot.dot_selected').classList.remove('dot_selected');
-    dotsContainer.children[index].classList.add('dot_selected');
+	document.querySelector('.dot.dot_selected').classList.remove('dot_selected');
+	dotsContainer.children[index].classList.add('dot_selected');
 }
-
 
 document.querySelector('.arrow_right').addEventListener('click', () => {
 	incrementerCompteurIndex();
-    metAJourAffichage(indexActuel);
+	metAJourAffichage(indexActuel);
 });
 
 document.querySelector('.arrow_left').addEventListener('click', () => {
 	decrementerCompteurIndex();
-    metAJourAffichage(indexActuel);
+	metAJourAffichage(indexActuel);
 });
 
 function decrementerCompteurIndex() {
-    indexActuel = (indexActuel - 1 + slides.length) % slides.length;
+	indexActuel = (indexActuel - 1 + slides.length) % slides.length;
 }
 
 function incrementerCompteurIndex() {
-    indexActuel = (indexActuel + 1) % slides.length;
+	indexActuel = (indexActuel + 1) % slides.length;
 }
